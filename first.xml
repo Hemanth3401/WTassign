@@ -1,0 +1,31 @@
+<?xml version="1.0" encoding="UTF-8"?> 
+<!DOCTYPE JNTU_Colleges[
+<!ELEMENT JNTU_Colleges (College?)>
+<!ELEMENT College (name,No_of_branches,Faculty_strength,Student_strength)>
+<!ELEMENT name (#PCDATA)>
+<!ELEMENT No_of_branches (#PCDATA)>
+<!ELEMENT Faculty_strength (#PCDATA)>
+<!ELEMENT Student_strength (#PCDATA)>
+<!ATTLIST College cid CDATA #REQUIRED>
+]>
+
+<JNTU_Colleges>
+    <College cid="1">  
+        <name>MLRIT</name>  
+        <No_of_branches>10</No_of_branches>  
+        <Faculty_strength>250</Faculty_strength>  
+        <Student_strength>5000</Student_strength> 
+    </College>
+    <College>  
+        <name>MLRITM</name>  
+        <No_of_branches>20</No_of_branches>  
+        <Faculty_strength>350</Faculty_strength>  
+        <Student_strength>7000</Student_strength> 
+    </College>
+    <College cid="3">  
+        <name>IARE</name>  
+        <No_of_branches>20</No_of_branches>  
+        <Faculty_strength>350</Faculty_strength>  
+        <Student_strength>7000</Student_strength> 
+    </College>
+</JNTU_Colleges>

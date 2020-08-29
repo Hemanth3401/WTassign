@@ -1,0 +1,109 @@
+<html>
+<head>
+    <title>registration form example</title>
+    <style>
+        tr.border_bottom td{
+            padding: 15px;
+            border-bottom: 1px solid lightgray;
+        }
+        td,th{
+            padding: 10px;
+        }
+        hr{
+            border: 1.5px solid black;
+        }
+        input{
+            background-color: lightgray;
+            padding: 10px;
+            border: none;
+        }
+        </style>
+</head>
+<body>
+    <header>
+        <h1 style="size:'35px';" align="left">
+        MOVERS  &  SHAKERS U
+        </h1>
+        <p>
+           3800 Jade St, North Vancouver, BC V7L 2C1 
+        </p>
+        <P>
+            <a href="tel:+6049604649">Tel: 604-960-4646</a> <a href="mailto:info@movers">Email:info@moversnshakersu.co</a>
+        </P>
+    </header>
+    <h1 style="color: cornflowerblue;">Student Registration Form</h1>
+    <table style="width:100%">
+        <form>
+            <tr>
+                <th></th>
+                <th></th>
+                <th style="text-align: right;" > Date</th>
+                <th align="left"><input type="text" size="50px" style="color: lightgray;"></th>
+            </tr>
+            <tr>
+                <td colspan="4"><h1 style="font-weight: solid;">PERSONAL INFORMATION</h1><hr></td>
+            </tr>
+            <tr class="border_bottom">
+                <td style="text-align: left;" style="cellspacing: 50px;"> NAME </td>
+                <td colspan="3"><input type="text" size="165px" placeholder="Name"></td>
+            </tr>
+            <tr class="border_bottom">
+                <td style="text-align: left;"> DATE OF BIRTH </td>
+                <td colspan="3"><input type="text" size="165px" placeholder="DATE OF BIRTH"></td>
+            </tr>
+            <tr>
+                <td colspan="4"><h1>CONTACT INFORMATION </h1><hr></td>
+            </tr>
+            <tr>
+                <td style="text-align: left;"> ADDRESS </td>
+                <td colspan="3"><input type="text" size="167px" placeholder="ADDRESS"></td>
+            </tr>
+            <tr class="border_bottom">
+                <td style="text-align: left;"> CITY </td>
+                <td><input type="text" size="50px" placeholder="CITY"></td>
+                <td style="text-align: left;"> PROVINCE/STATE </td>
+                <td><input type="text" size="50px" placeholder="PROVINCE/STATE"></td>
+            </tr>
+            <tr class="border_bottom">
+                <td style="text-align: left;"> ZIP CODE </td>
+                <td><input type="text" size="50px" placeholder="ZIP CODE"></td>
+                <td style="text-align: left;"> COUNTRY </td>
+                <td><input type="text" size="50px" placeholder="PROVINCE/STATE"></td>
+            </tr>
+            <tr class="border_bottom">
+                <td style="text-align: left;"> PHONE </td>
+                <td><input type="text" size="50px" placeholder="CITY"></td>
+                <td style="text-align: left;"> EMAIL </td>
+                <td><input type="email"size="50px" placeholder="PROVINCE/STATE"></td>
+            </tr>
+            <trclass="border_bottom">
+                <td style="text-align: left;" name="member"> MEMBERSHIP TYPE </td>
+                <td align="center"><input type="radio"name="member" value="regular">Regular</td>
+                <td align="center"><input type="radio" name="member" value="premium">Premium</td>
+                <td align="center"><input type="radio" name="member" value="vip">VIP</td>
+            </tr>
+            <tr>
+                <td colspan="4"><h1>COURSE INFORMATION</h1><hr></td>
+            </tr>
+            <tr class="border_bottom">
+                <td style="text-align: left;"> COURSE NAME </td>
+                <td colspan="3"><input type="text" size="167px" placeholder="COURSE NAME"></td>
+            </tr>
+            <tr class="border_bottom">
+                <td style="text-align: left;" name="member"> MEMBERSHIP TYPE </td>
+                <td align="center"><input type="radio" name="member" value="cash">Cash</td>
+                <td align="center"><input type="radio" name="member" value="cheque">Cheque</td>
+                <td align="center"><input type="radio" name="member" value="creditcard">Credit Card</td>
+            </tr>
+            <tr class="border_bottom">
+                <td style="text-align: left;"> COMMENTS </td>
+                <td colspan="3"><input type="text" size="165px"></td>
+            </tr>
+            <tr>
+                <td colspan="2"><textarea name="sign" rows="5" cols="75px">STUDENT SIGNATURE </textarea></td>
+                <td colspan="2"><textarea name="validate" rows="5" cols="75px">VALIDATED BY </textarea></td>
+            </tr>
+        </form>
+    </table>
+</body>
+</html>

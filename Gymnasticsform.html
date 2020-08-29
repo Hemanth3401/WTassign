@@ -1,0 +1,93 @@
+<!DOCTYPE HTML>
+<html>
+    <head>
+        <title>Gymnastics Vooster Club</title>
+        <style>
+            table.top{
+                border-top: 1px solid black;
+                border-left: 1px solid black;
+                border-right: 1px solid black;
+                border-bottom: 1px solid black;
+                border-collapse: collapse;
+                padding: 10px;
+            }
+            th , td{
+                padding: 10px;;
+            }
+        </style>
+    </head>
+    <body>
+            <table class="top">
+                <tr >
+                    <th>
+                        <h2>Welcome to Millennium Gymnastics Booster Club Popcorn Sales</h2>
+                    </th>
+                </tr>
+                <tr>
+                    <td>
+                        <label>Buyer's Name: <input type="text" name="name" id="name"></label>
+                    </td>
+                </tr>
+                <tr>
+                    <td>
+                        <label>Street Address: <input type="text" name="address" id="address"></label>
+                    </td>
+                </tr>
+                <tr>
+                    <td>
+                        <label>City, State, Zip: <input type="text" name="city" id="city"></label>
+                    </td>
+                </tr>
+                <tr>
+                    <td>
+                        <table border="">
+                            <tr>
+                                <th>Product Name</th>
+                                <th>Price</th>
+                                <th>Quantity</th>
+                            </tr>
+                            <tr>
+                                <td>Unpopped Popcorn(1 lb.)</td>
+                                <td>$3.00</td>
+                                <td><input type="text" name="popcornqua"></td>
+                            </tr>
+                            <tr>
+                                <td>Carmel Popcorn(2 lb. canister)</td>
+                                <td>$3.50</td>
+                                <td><input type="text" name="popcorncar"></td>
+                            </tr>
+                            <tr>
+                                <td>Carmel Nut Popcorn(2 lb. canister)</td>
+                                <td>$4.50</td>
+                                <td><input type="text" name="popcornnut"></td>
+                            </tr>
+                            <tr>
+                                <td>Toffey Nut Popcorn(2 lb. canister)</td>
+                                <td>$5.00</td>
+                                <td><input type="text" name="popcorntof"></td>
+                            </tr>
+                        </table>
+                    </td>
+                </tr>
+                <tr>
+                    <td align="left">
+                        <h2>Payment Method:</h2>
+                    </td>
+                </tr>
+                <tr>
+                    <td>
+                        <label>Visa<input type="radio" value="visa"></label>
+                        <label>Master Card<input type="radio" value="card"></label>
+                        <label>Discover<input type="radio" value="sicover"></label>
+                        <label>Check<input type="radio" value="check"></label>
+                    </td>
+                </tr>
+                <tr>
+                    <td>
+                        <button name="submit">Submit Order</button>
+                        <button name="cancel">Clear Order Form</button>
+                    </td>
+                </tr>
+            </table>
+    </body>
+</html>
