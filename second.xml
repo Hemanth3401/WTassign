@@ -1,0 +1,37 @@
+<?xml version="1.0"?>
+<!DOCTYPE Student_Info [
+<!ELEMENT Student_Info (student+)>
+<!ELEMENT student (Name,sem,sec,Dept,College)>
+<!ELEMENT Name (Fname,Initial*,Lname)>
+<!ELEMENT Fname (#PCDATA)>
+<!ELEMENT Initial (#PCDATA)>
+<!ELEMENT Lname (#PCDATA)>
+<!ELEMENT sem (#PCDATA)>
+<!ELEMENT sec (#PCDATA)>
+<!ELEMENT Dept (#PCDATA)>
+<!ELEMENT College (#PCDATA)>
+<!ATTLIST student rollno CDATA #REQUIRED>
+]>
+<Student_Info>
+    <student rollno="1">
+        <Name>
+            <Fname>Ab</Fname>
+            <Initial>c</Initial>
+            <Lname>d</Lname>
+        </Name>
+        <sem>2</sem>
+        <sec>2</sec>
+        <Dept>CSE</Dept>
+        <College>MLRIT</College>
+    </student>
+    <student >
+        <Name>
+            <Fname>Ab</Fname>
+            <Lname>d</Lname>
+        </Name>
+        <sem>5</sem>
+        <sec>C</sec>
+        <Dept>CSE</Dept>
+        <College>MLRIT</College>
+    </student>
+</Student_Info>
