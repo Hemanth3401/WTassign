@@ -1,0 +1,68 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!--Create a DTD for catalog of cars, where each car has the child elements
+make, model, year, colour, engine, no_of _doors, transmission_type, and accessories.
+The engine element has the child elements number_of_cylinders and fuel system (carbureted or fuel-injected).
+The accessories element has the attributes radio, air-conditioning, power-windows, power-steering, and power-brakes
+each of which is required and has the possible values yes and no. Entities must be declared for the names of popular car makes.
+Create a XML document with atleast 3 instances of the car elements defined in DTD as above.
+Process this document using the DTD above and produce a display of raw XML document.-->
+
+<!DOCTYPE car_catalog[ 
+<!ELEMENT car_catalog (car+)>
+<!ELEMENT car (make,model,year,colour,engine,no_of_doors,transmission_type,accessories)>
+<!ELEMENT make (#PCDATA)>
+<!ELEMENT model (#PCDATA)>
+<!ELEMENT year (#PCDATA)>
+<!ELEMENT colour (#PCDATA)>
+<!ELEMENT engine (number_of_cylinders,fuel_system)>
+<!ELEMENT number_of_cylinders (#PCDATA)>
+<!ELEMENT fuel_system (#PCDATA)>
+<!ELEMENT no_of_doors (#PCDATA)>
+<!ELEMENT transmission_type (#PCDATA)>
+<!ATTLIST accessories radio CDATA #REQUIRED>
+<!ATTLIST accessories air_conditioning CDATA #REQUIRED>
+<!ATTLIST accessories power_windows CDATA #REQUIRED>
+<!ATTLIST accessories power_steering CDATA #REQUIRED>
+<!ATTLIST accessories power_brakes CDATA #REQUIRED>
+]>
+<car_catalog>
+    <car>
+        <make>BMW</make>
+        <model>BMW Q1</model>
+        <year>2020</year>
+        <colour>Gray</colour>
+        <engine>
+            <number_of_cylinders>8</number_of_cylinders>
+            <fuel_system>fuel-injected </fuel_system>
+        </engine>
+        <no_of_doors>5</no_of_doors>
+        <transmission_type>Full transmission</transmission_type>
+        <accessories radio = "yes" air_conditioning = "yes" power_windows = "yes" power_steering = "no" power_brakes = "yes"/>
+    </car>
+    <car>
+        <make>TATA</make>
+        <model>TATA V2</model>
+        <year>2019</year>
+        <colour>BLACK</colour>
+        <engine>
+            <number_of_cylinders>9</number_of_cylinders>
+            <fuel_system>carbureted</fuel_system>
+        </engine>
+        <no_of_doors>4</no_of_doors>
+        <transmission_type>Random transmission</transmission_type>
+        <accessories radio = "yes" air_conditioning = "yes" power_windows = "no" power_steering = "yes" power_brakes = "no"/>
+    </car>
+    <car>
+        <make>MG</make>
+        <model>MG Vector5</model>
+        <year>2020</year>
+        <colour>Red</colour>
+        <engine>
+            <number_of_cylinders>15</number_of_cylinders>
+            <fuel_system>carbureted </fuel_system>
+        </engine>
+        <no_of_doors>8</no_of_doors>
+        <transmission_type>Automated transmission</transmission_type>
+        <accessories radio = "yes" air_conditioning = "no" power_windows = "yes" power_steering = "yes" power_brakes = "yes"/>
+    </car>
+</car_catalog>

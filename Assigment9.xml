@@ -1,0 +1,75 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!--Design an XML document to share information about patients in a hospital.
+Information about patients include name(in three parts), social security number, age, room number,
+primary insurance company-including member identification number, phone number and address- known medical problems and known drug allergies.
+Both attributes and nested tags must be included. Make up sample data for atleast four patients.
+Write a DTD for the above document with the following restrictions: the name, social security number, and primary insurance company are required.
+All other elements are optional.-->
+
+<!DOCTYPE hospital[
+<!ELEMENT hospital (patients+)>
+<!ELEMENT patients (name,social_security_no,age*,room_number*,insurance_company,medproblem*,drugallegies*)>
+<!ELEMENT name (fname,mname,lname)>
+<!ELEMENT fname (#PCDATA)>
+<!ELEMENT mname (#PCDATA)>
+<!ELEMENT lname (#PCDATA)>
+<!ELEMENT social_security_no (#PCDATA)>
+<!ELEMENT age (#PCDATA)>
+<!ELEMENT room_number (#PCDATA)>
+<!ELEMENT insurance_company (id_num,phone_num,address)>
+<!ELEMENT id_num (#PCDATA)>
+<!ELEMENT phone_num (#PCDATA)>
+<!ELEMENT address (#PCDATA)>
+<!ELEMENT medproblem (#PCDATA)>
+<!ELEMENT drugallegies (#PCDATA)>
+<!ATTLIST insurance_company name CDATA #REQUIRED>
+<!ATTLIST insurance_company type CDATA #REQUIRED>
+]> 
+<hospital>
+    <patients>
+        <name>
+            <fname>A</fname>
+            <mname>B</mname>
+            <lname>C</lname>
+        </name>
+        <social_security_no>9865</social_security_no>
+        <room_number>257</room_number>
+        <insurance_company name="SSR" type="primary">
+            <id_num>69735</id_num>
+            <phone_num>9876543210</phone_num>
+            <address>Hyderbad</address>
+        </insurance_company>
+        <medproblem>None</medproblem>
+    </patients>
+    <patients>
+        <name>
+            <fname>B</fname>
+            <mname>C</mname>
+            <lname>A</lname>
+        </name>
+        <social_security_no>4567</social_security_no>
+        <age>56</age>
+        <insurance_company name="SSIT" type="major">
+            <id_num>587632</id_num>
+            <phone_num>9012345678</phone_num>
+            <address>Kukatpally</address>
+        </insurance_company>
+        <medproblem>Sinus</medproblem>
+        <drugallegies>Jandhu Bamb</drugallegies>
+    </patients>
+    <patients>
+        <name>
+            <fname>L</fname>
+            <mname>M</mname>
+            <lname>N</lname>
+        </name>
+        <social_security_no>7453</social_security_no>
+        <age>59</age>
+        <room_number>127</room_number>
+        <insurance_company name="LMAD" type="secondary">
+            <id_num>445789</id_num>
+            <phone_num>912348765</phone_num>
+            <address>Madavram Nagar Colony</address>
+        </insurance_company>
+    </patients>
+</hospital>
