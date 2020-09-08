@@ -1,0 +1,85 @@
+<?xml version="1.0"?>
+<xs:schema xmlns:xs="http://www.w3.org/2001/XMLSchema">
+    <xs:element name="Students" type="studentslist"/>  
+        <xs:complexType name="studentslist">
+			<xs:sequence>
+				<xs:element name="studentlist" type="stulist"/>
+			</xs:sequence>
+		</xs:complexType>
+		<xs:complexType name="stulist">
+            <xs:sequence>
+                <xs:element name="sname" >
+                    <xs:complexType>
+                        <xs:sequence>
+                            <xs:element name="fname">
+                                <xs:simpleType>
+                                    <xs:restriction base="xs:string">
+										<xs:maxLength value="15"/>
+									</xs:restriction>
+                                </xs:simpleType>
+                            </xs:element>
+                            <xs:element name="initial">
+                                <xs:simpleType>
+                                    <xs:restriction base="xs:string">
+										<xs:length value="1"/>
+									</xs:restriction>
+                                </xs:simpleType>
+                            </xs:element>
+                            <xs:element name="lname">
+                                <xs:simpleType>
+                                    <xs:restriction base="xs:string">
+										<xs:maxLength value="15"/>
+									</xs:restriction>
+                                </xs:simpleType>
+                            </xs:element>
+                        </xs:sequence>
+                    </xs:complexType>
+                </xs:element>
+                <xs:element name="sem">
+                    <xs:simpleType>
+                        <xs:restriction base="xs:integer">
+							<xs:minInclusive value="1"/>
+							<xs:maxInclusive value="8"/>
+						</xs:restriction>
+                    </xs:simpleType>
+                </xs:element>
+                <xs:element name="section">
+                    <xs:simpleType>
+                        <xs:restriction base="xs:string">
+							<xs:pattern value="[A-D]"/>
+						</xs:restriction>
+                    </xs:simpleType>
+                </xs:element>
+                <xs:element name="department">
+                    <xs:simpleType>
+                        <xs:restriction base="xs:string">
+                            <xs:enumeration value="CSE"/>
+                            <xs:enumeration value="ECE"/>
+                            <xs:enumeration value="IT"/>
+                            <xs:enumeration value="EEE"/>
+                            <xs:enumeration value="MECH"/>
+                            <xs:enumeration value="CIVIL"/>
+                            <xs:enumeration value="MBA"/>
+                        </xs:restriction>
+                    </xs:simpleType>
+                </xs:element>
+                <xs:element name="collage">
+                    <xs:simpleType>
+                        <xs:restriction base="xs:string">
+							<xs:maxLength value="15"/>
+						</xs:restriction>
+                    </xs:simpleType>
+                </xs:element>
+                <xs:element name="dob" type="xs:date"/>
+                <xs:element name="gender" type="xs:string"/>
+            </xs:sequence>
+			<xs:attribute name="roll">
+                <xs:simpleType>
+                    <xs:restriction base="xs:string">
+						<xs:pattern value="[5][0-9a-zA-Z][0-9a-zA-Z]"/>
+					</xs:restriction>
+                </xs:simpleType>
+            </xs:attribute>
+            <xs:attribute name="colid" type="xs:integer"/>
+        </xs:complexType>
+</xs:schema> 

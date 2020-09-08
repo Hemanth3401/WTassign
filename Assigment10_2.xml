@@ -1,0 +1,19 @@
+<?xml version="1.0"?>
+<Students 
+xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+xsi:noNamespaceSchemaLocation="Assigment10_1.xsd"
+>
+	<studentlist roll="5a7" colid="1578">
+	<sname>
+			<fname>A</fname>
+			<initial>B</initial>
+			<lname>C</lname>
+		</sname>
+		<sem>5</sem>
+		<section>C</section>
+		<department>CSE</department>
+		<collage>MLRIT</collage>
+		<dob>2000-03-04</dob>
+		<gender>M</gender>
+	</studentlist>
+</Students> 
